@@ -1,0 +1,326 @@
+:root {
+    --bg-dark: #1A1A1D;
+    --container-bg: #252528;
+    --card-bg: #333336;
+    --text-primary: #F5F5F5;
+    --text-secondary: #B3B3B3;
+    --accent-green: #4ADE80;
+    --accent-green-dark: #36a162;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1100px;
+    background-color: var(--container-bg);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+/* Helper Class for CTA Buttons */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-green);
+    color: var(--bg-dark);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-green-dark);
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.logo div {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo small {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.main-nav a:not(.cta-button) {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:not(.cta-button):hover {
+    color: var(--text-primary);
+}
+
+/* style.css */
+.hero-section {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-info {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+/* style.css */
+.about-section {
+    margin-bottom: 4rem;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.about-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.text-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.skills-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skills-card li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.skills-card li i {
+    color: var(--accent-green);
+    width: 20px;
+    text-align: center;
+}
+/* style.css */
+.journey-section {
+    margin-bottom: 4rem;
+}
+
+.journey-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* --- Timeline CSS --- */
+.timeline ul {
+    list-style: none;
+    position: relative;
+    padding-left: 2rem;
+}
+/* The vertical line */
+.timeline ul::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background-color: var(--card-bg);
+}
+
+.timeline li {
+    margin-bottom: 2rem;
+    position: relative;
+}
+/* The circles */
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 5px;
+    transform: translateX(-45%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--accent-green);
+}
+
+.timeline li strong {
+    font-size: 1.1rem;
+}
+
+.timeline li small {
+    display: block;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+/* --- Featured Work Card --- */
+.featured-work-card {
+    background-color: white;
+    color: var(--bg-dark);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.featured-images {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.featured-images img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.featured-work-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.featured-work-card p {
+    color: #666;
+}
+
+/* style.css */
+.works-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card h3 {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* style.css */
+@media (max-width: 992px) {
+    .hero-section, .about-grid, .journey-grid {
+        grid-template-columns: 1fr; /* Stack columns */
+    }
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-image {
+        display: none; /* Hide the big hero image on medium screens for space */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1.5rem;
+    }
+    .main-header {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .hero-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+}
